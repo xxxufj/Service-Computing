@@ -17,7 +17,7 @@ func main() {
 此命令构建了 `hello` 命令，产生一个可执行的二进制文件安装到工作空间的 bin 目录中。 在我的电脑上为 `$GOPATH/bin/hello`
 进入到该文件夹下执行程序：
 
-![图一](pictures/1.PNG)
+![图一](pictures/3.PNG)
 
 ## 二、编写第一个库
 类似的，在 `$GOPATH/src/github.com/user/stringutil` 创建新的包目录
@@ -55,6 +55,7 @@ func main() {
 在hello 的文件夹下使用 $ go install 命令。这样他所依赖的 stringutil 包也会被自动安装。
 运行此程序的新版本，此时看到了反向信息：
 
+![图二](pictures/2.PNG)
 
 ## 三、测试
 创建文件 $GOPATH/src/github.com/user/stringutil/reverse_test.go 来为 stringutil 添加测试
@@ -80,5 +81,5 @@ func TestReverse(t *testing.T) {
 }
 ```
 使用 go test 运行该测试
-
+![图三](pictures/1.PNG)
 
