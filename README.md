@@ -15,6 +15,7 @@ func main() {
 在该文件夹中通过 `go install` 安装
 此命令构建了 `hello` 命令，产生一个可执行的二进制文件安装到工作空间的 bin 目录中。 在我的电脑上为 `$GOPATH/bin/hello`
 进入到该文件夹下执行程序：
+![图一](pictures/1.PNG)
 
 ## 二、编写第一个库
 类似的，在 `$GOPATH/src/github.com/user/stringutil` 创建新的包目录
