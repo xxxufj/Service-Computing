@@ -231,17 +231,26 @@ func printToDes(fout interface{}, fin *os.File, pageStart int, pageEnd int, page
 * 函数 `createPipe` 将命令行的输入管道cmd.StdinPipe()获取的指针赋值给fout，然后将fout返回给printToDes作为输出位置
 
 # 测试结果
->按文档 使用 selpg 章节要求测试该程序
 
 1. `selpg -s10 -e20 input_file`
+![1](pictures/1.png)
+
 
 2. `selpg -s10 -e20 < input_file`
 
+![1](pictures/1.png)
+
 3. `other_command | selpg -s10 -e20`
+
+![1](pictures/1.png)
 
 4. `selpg -s10 -e20 input_file >output_file`
 
+![1](pictures/1.png)
+
 5. `selpg -s10 -e20 input_file 2>error_file`
+
+![1](pictures/1.png)
 
 6. `selpg -s10 -e20 input_file >output_file 2>error_file`
 
