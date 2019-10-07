@@ -75,6 +75,7 @@ func getArgs(args *selpgArgs) {
 * 检查是否还有剩余的参数用作输入文件名
 
 ```go
+
 func checkArgs(sa *selpgArgs) {
 	if len(os.Args) < 3 {
 		fmt.Fprintf(os.Stderr, "\n%s: not enough arguments\n", progname)
@@ -171,7 +172,7 @@ func excute(sa *selpgArgs) {
 * 在页数超出（start，end）范围时输出错误
 * 页数符合要求时将输出送到目标地址
 
-```go
+``` go
 func printToDes(fout interface{}, fin *os.File, pageStart int, pageEnd int, pageLen int, pageType bool) {
 	lineCount := 0
 	finalPage := 1
@@ -220,8 +221,9 @@ func printToDes(fout interface{}, fin *os.File, pageStart int, pageEnd int, page
 	}
 }
 ```
-
+	
 <br>
+
 其余函数
 
 * 函数 `execError`进行错误的检查与类型输出
@@ -230,41 +232,63 @@ func printToDes(fout interface{}, fin *os.File, pageStart int, pageEnd int, page
 
 * 函数 `createPipe` 将命令行的输入管道cmd.StdinPipe()获取的指针赋值给fout，然后将fout返回给printToDes作为输出位置
 
+
 # 测试结果
 
 1. `selpg -s10 -e20 input_file`
+
 ![1](pictures/1.png)
 
 
 2. `selpg -s10 -e20 < input_file`
 
-![1](pictures/1.png)
+![1](pictures/2.png)
 
 3. `other_command | selpg -s10 -e20`
 
-![1](pictures/1.png)
+
+![1](pictures/3.png)
 
 4. `selpg -s10 -e20 input_file >output_file`
 
-![1](pictures/1.png)
+
+![1](pictures/4.png)
+
 
 5. `selpg -s10 -e20 input_file 2>error_file`
 
-![1](pictures/1.png)
+![1](pictures/5.png)
 
 6. `selpg -s10 -e20 input_file >output_file 2>error_file`
 
+![1](pictures/6.png)
+
+
 7. `selpg -s10 -e20 input_file >output_file 2>/dev/null`
+
+![1](pictures/7.png)
+
 
 8. `selpg -s10 -e20 input_file >/dev/null`
 
+![1](pictures/8.png)
+
+
 9. `selpg -s10 -e20 input_file | other_command`
+
+![1](pictures/9.png)
 
 10. `selpg -s10 -e20 input_file 2>error_file | other_command`
 
+![1](pictures/10.png)
+
 11. `selpg -s10 -e20 -l66 input_file`
 
+![1](pictures/11.png)
+
 12. `selpg -s10 -e20 -f input_file`
+
+![1](pictures/12.png)
 
 
 
