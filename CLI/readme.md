@@ -1,4 +1,4 @@
-# 概述
+﻿# 概述
   CLI（Command Line Interface）实用程序是Linux下应用开发的基础。正确的编写命令行程序让应用与操作系统融为一体，通过shell或script使得应用获得最大的灵活性与开发效率。Linux提供了cat、ls、copy等命令与操作系统交互；go语言提供一组实用程序完成从编码、编译、库管理、产品发布全过程支持；容器服务如docker、k8s提供了大量实用程序支撑云服务的开发、部署、监控、访问等管理任务；git、npm等都是大家比较熟悉的工具。尽管操作系统与应用系统服务可视化、图形化，但在开发领域，CLI在编程、调试、运维、管理中提供了图形化程序不可替代的灵活性与效率。
   
 # 开发实践
@@ -233,9 +233,9 @@ func printToDes(fout interface{}, fin *os.File, pageStart int, pageEnd int, page
 # 测试结果
 >按文档 使用 selpg 章节要求测试该程序
 
-1. `selpg -s10 -e20 -l66 input_file`
+1. `selpg -s10 -e20 input_file`
 
-2. `selpg -s1 -e1 < input_file`
+2. `selpg -s10 -e20 < input_file`
 
 3. `other_command | selpg -s10 -e20`
 
@@ -256,10 +256,6 @@ func printToDes(fout interface{}, fin *os.File, pageStart int, pageEnd int, page
 11. `selpg -s10 -e20 -l66 input_file`
 
 12. `selpg -s10 -e20 -f input_file`
-
-13. `selpg -s10 -e20 -dlp1 input_file`
-
-14. `selpg -s10 -e20 input_file > output_file 2>error_file &`
 
 
 
