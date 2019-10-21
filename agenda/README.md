@@ -26,13 +26,15 @@ git clone https://github.com/golang/text
 
 `go install github.com/spf13/cobra/cobra`
 
+![img](https://github.com/xxxufj/Service-Computing/tree/master/agenda/pictures/1/1.PNG)
+
+此时安装就不再出现报错信息了
 
 
 ## cobra 的简单使用
 简单使用的目标是创建一个处理命令 register -uTestUser 的程序
 
 首先创建程序 testcobra
-
 `cobra init test --pkg-name=github.com/homework/test/testcobra`
 
 添加指令 register
@@ -53,7 +55,6 @@ git clone https://github.com/golang/text
 username, _ := cmd.Flags().GetString("user")
 fmt.Println("register called by " + username)
 ```
-
 对 `register` 函数进行测试
 
 ```go
@@ -61,6 +62,9 @@ go run main.go register --user=TestUser
 ```
 
 测试结果如下
+
+![img](https://github.com/xxxufj/Service-Computing/tree/master/agenda/pictures/2/1.PNG)
+
 
 
 
@@ -74,6 +78,16 @@ go run main.go register --user=TestUser
 
 #### 测试结果：
 
+新用户注册
+
+![img](https://github.com/xxxufj/Service-Computing/tree/master/agenda/pictures/3/1.PNG)
+
+
+错误范例：用户名重复注册
+
+![img](https://github.com/xxxufj/Service-Computing/tree/master/agenda/pictures/3/2.PNG)
+
+
 
 #### login 需求
 * 用户使用用户名和密码登录 Agenda 系统。
@@ -82,16 +96,10 @@ go run main.go register --user=TestUser
 * 使用方法：login -u username -p password
 
 #### 测试结果：
-新用户注册
 
+用户正确登陆 与 用户账号与密码不匹配
 
-错误范例：用户名重复注册
-
-
-用户正确登陆
-
-
-错误范例：用户账号与密码不匹配
+![img](https://github.com/xxxufj/Service-Computing/tree/master/agenda/pictures/3/3.PNG)
 
 
 
