@@ -26,7 +26,7 @@ git clone https://github.com/golang/text
 
 `go install github.com/spf13/cobra/cobra`
 
-![img](https://github.com/xxxufj/Service-Computing/tree/master/agenda/pictures/1/1.PNG)
+![img](https://github.com/xxxufj/Service-Computing/blob/master/agenda/pictures/1/1.PNG)
 
 此时安装就不再出现报错信息了
 
@@ -63,7 +63,7 @@ go run main.go register --user=TestUser
 
 测试结果如下
 
-![img](https://github.com/xxxufj/Service-Computing/tree/master/agenda/pictures/2/1.PNG)
+![img](https://github.com/xxxufj/Service-Computing/tree/blob/master/agenda/pictures/2/1.PNG)
 
 
 
@@ -80,12 +80,12 @@ go run main.go register --user=TestUser
 
 新用户注册
 
-![img](https://github.com/xxxufj/Service-Computing/tree/master/agenda/pictures/3/1.PNG)
+![img](https://github.com/xxxufj/Service-Computing/tree/blob/master/agenda/pictures/3/1.PNG)
 
 
 错误范例：用户名重复注册
 
-![img](https://github.com/xxxufj/Service-Computing/tree/master/agenda/pictures/3/2.PNG)
+![img](https://github.com/xxxufj/Service-Computing/tree/blob/master/agenda/pictures/3/2.PNG)
 
 
 
@@ -99,7 +99,7 @@ go run main.go register --user=TestUser
 
 用户正确登陆 与 用户账号与密码不匹配
 
-![img](https://github.com/xxxufj/Service-Computing/tree/master/agenda/pictures/3/3.PNG)
+![img](https://github.com/xxxufj/Service-Computing/tree/blob/master/agenda/pictures/3/3.PNG)
 
 
 
