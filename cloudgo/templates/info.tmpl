@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>User Info</title>
+</head>
+
+<body>
+    <div id="image">
+        <img src="2.jpg" height="100%" width="100%" />
+    </div>
+
+    <div>
+        <p class="name">Hello, {{.user.Username}}</p>
+    </div>
+
+    <table>
+        <tr>
+            <th>Username  </th>
+            <td>{{.user.Username}}</td>
+        </tr>
+        <tr>
+            <th>Password  </th>
+            <td>{{.user.Password}}</td>
+        </tr>
+    </table>
+</body>
+</html>
