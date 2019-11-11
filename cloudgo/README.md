@@ -2,8 +2,12 @@
 
 ![](https://github.com/xxxufj/Service-Computing/blob/master/cloudgo/img/2.PNG)
 
+<br>
+
 # 概述
 开发简单 web 服务程序 cloudgo，了解 web 服务器工作原理
+
+<br>
 
 # 任务目标
 * 熟悉 go 服务器工作原理
@@ -11,12 +15,16 @@
 * 使用 curl 工具访问 web 程序
 * 对 web 执行压力测试
 
+<br>
+
 # 要求
 * 编程 web 服务程序 类似 cloudgo 应用。
   * 要求有详细的注释
   * 是否使用框架、选哪个框架自己决定 请在 README.md 说明你决策的依据
 * 使用 curl 测试，将测试结果写入 README.md
 * 使用 ab 测试，将测试结果写入 README.md。并解释重要参数
+
+<br>
 
 # 编程 web 服务程序
 ## 框架选择
@@ -48,8 +56,6 @@ func main() {
 * 执行 `go run main.go`
 
 ![](https://github.com/xxxufj/Service-Computing/blob/master/cloudgo/img/1.PNG)
-
-<br>
 
 ## web 页面渲染
 * 页面渲染使用martini的中间件 `render`
@@ -116,10 +122,17 @@ m.Post("/", binding.Bind(User{}), func(u User, r render.Render) {
 
 ![](https://github.com/xxxufj/Service-Computing/blob/master/cloudgo/img/3.PNG)
 
+<br>
 
 # 使用 curl 工具访问 web 程序
+其中的 -v 命令来显示客户端与服务器交互的详细信息
+* `*` 表示 curl 任务；
+* `>` 发送的信息;
+* `<` 返回的信息
 
 ![](https://github.com/xxxufj/Service-Computing/blob/master/cloudgo/img/4.PNG)
+
+<br>
 
 # 对 web 执行压力测试
 * 执行命令 `ab -n 10000 -c 1000 http://localhost:3000/` 来进行压力测试
@@ -128,7 +141,7 @@ m.Post("/", binding.Bind(User{}), func(u User, r render.Render) {
 
 ![](https://github.com/xxxufj/Service-Computing/blob/master/cloudgo/img/5.PNG)
 
-* ab 命令参数
+* **ab 命令参数**
   * -n 执行的请求数量
   * -c 并发请求个数
   * -t 测试所进行的最大秒数
@@ -136,7 +149,7 @@ m.Post("/", binding.Bind(User{}), func(u User, r render.Render) {
   * -T POST数据所使用的Content-type头信息
   * -k 启用HTTP KeepAlive功能，即在一个HTTP会话中执行多个请求，默认时，不启用KeepAlive功能
   
-* 结果说明
+* **结果说明**
   * Document Path: 请求的资源
   * Document Length: 文档返回的长度，不包括相应头
   * Concurrency Level：并发数
