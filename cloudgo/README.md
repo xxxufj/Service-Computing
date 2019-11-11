@@ -1,5 +1,6 @@
 # 程序效果
 
+![](https://github.com/xxxufj/Service-Computing/blob/master/cloudgo/img/2.PNG)
 
 # 概述
 开发简单 web 服务程序 cloudgo，了解 web 服务器工作原理
@@ -46,6 +47,9 @@ func main() {
 
 * 执行 `go run main.go`
 
+![](https://github.com/xxxufj/Service-Computing/blob/master/cloudgo/img/1.PNG)
+
+<br>
 
 ## web 页面渲染
 * 页面渲染使用martini的中间件 `render`
@@ -98,8 +102,8 @@ type User struct {
 	})
 
 ```
-界面显示
 
+![](https://github.com/xxxufj/Service-Computing/blob/master/cloudgo/img/2.PNG)
 
 ## 用户提交表单
 ```go
@@ -109,11 +113,40 @@ m.Post("/", binding.Bind(User{}), func(u User, r render.Render) {
 		r.HTML(200, "info", map[string]interface{}{"user": p})
 	})
 ```
-界面显示
 
+![](https://github.com/xxxufj/Service-Computing/blob/master/cloudgo/img/3.PNG)
 
 
 # 使用 curl 工具访问 web 程序
 
+![](https://github.com/xxxufj/Service-Computing/blob/master/cloudgo/img/4.PNG)
 
 # 对 web 执行压力测试
+* 执行命令 `ab -n 10000 -c 1000 http://localhost:3000/` 来进行压力测试
+* 参数说明： -n表示请求数，-c表示并发数
+* 可以看到，在1000个请求，100个并发的情况下，总共使用了1.2秒左右时间来完成处理
+
+![](https://github.com/xxxufj/Service-Computing/blob/master/cloudgo/img/5.PNG)
+
+* ab 命令参数
+  * -n 执行的请求数量
+  * -c 并发请求个数
+  * -t 测试所进行的最大秒数
+  * -p 包含了需要POST的数据的文件
+  * -T POST数据所使用的Content-type头信息
+  * -k 启用HTTP KeepAlive功能，即在一个HTTP会话中执行多个请求，默认时，不启用KeepAlive功能
+  
+* 结果说明
+  * Document Path: 请求的资源
+  * Document Length: 文档返回的长度，不包括相应头
+  * Concurrency Level：并发数
+  * Time taken for tests：完成所有请求总共花费的时间
+  * Complete requests：成功请求的次数
+  * Failed requests：失败请求的次数
+  * Total transferred：总共传输的字节数
+  * HTML transferred：实际页面传输的字节数
+  * Requests per second：每秒请求数
+  * Time per request: [ms] (mean)： 平均每个请求消耗的时间
+  * Time per request: [ms] (mean, across all concurrent requests) ：上面的请求除以并发数
+  * Transfer rate：传输速率
+
