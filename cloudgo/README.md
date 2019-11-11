@@ -2,12 +2,10 @@
 
 ![](https://github.com/xxxufj/Service-Computing/blob/master/cloudgo/img/2.PNG)
 
-<br>
 
 # 概述
 开发简单 web 服务程序 cloudgo，了解 web 服务器工作原理
 
-<br>
 
 # 任务目标
 * 熟悉 go 服务器工作原理
@@ -15,7 +13,6 @@
 * 使用 curl 工具访问 web 程序
 * 对 web 执行压力测试
 
-<br>
 
 # 要求
 * 编程 web 服务程序 类似 cloudgo 应用。
